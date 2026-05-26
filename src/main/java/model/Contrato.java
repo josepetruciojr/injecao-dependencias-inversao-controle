@@ -1,6 +1,7 @@
 package model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,7 +58,7 @@ public class Contrato {
     public String toString() {
         return "Contrato{" +
                 "numero=" + numero +
-                ", data=" + data +
+                ", data=" + data.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) +
                 ", valorTotal=" + String.format("%.2f", valorTotal) +
                 '}';
     }
